@@ -1,0 +1,55 @@
+
+<div class="content-fluid">
+    <div class="scroll-show">
+      <accordion> 
+           <div class="row spar-smar muro-box" ng-repeat="act in Actividades">
+              <div class="col-md-2 spad-smar center-block">
+                  <img src="{{act.url_foto}}" class="img-responsive foto-perfil">
+              </div>
+              <div class="col-md-10">
+                  <p class="mensaje-comunity"><h4 class="link-orange" ng-click="goTo(act.id_user)"> {{act.nombreUser}}</h4>
+                  <p> {{act.descripcion}} <a>{{act.extra}}</a> {{act.extra2en}} <a>{{act.extra2}}</a></p>
+                  <p class="date-comunity">{{act.fecha | date:"shortTime"}}</p>
+              </div>
+              <hr class="col-md-12 spad-smar">
+              <div class="row spad-smar">
+
+                  <div class="col-md-12 spad-smar" ng-click="getComentarios(act.id_post)">
+                      <accordion-group  is-open="status.open" id="comentarios"  class="row spad-smar text-center" >
+                            <accordion-heading>
+                            Comentarios <i class="pull-right glyphicon icon-orange" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            </accordion-heading>
+                            <div ng-repeat="comentario in comentarios" class="col-md-12 row spad-smar text-left">
+                               <div class="col-md-2 center-block spad-smar">
+                                    <img src="{{comentario.url_foto}}" class="img-responsive foto-comment">
+                                    </div>
+                                <div class="col-md-10 comment-text-box">
+                                    <p><a class="link-orange">{{comentario.username}} </a> {{comentario.contenido}}</p>
+                                    <p class="date-comunity" >{{comentario.fecha | date:"shortTime"}}</p>
+                                    
+                                </div>
+                                <div class="row">
+                                <div class="col-md-2"></div>
+                                <hr class="col-md-10 hr-comment">
+                                </div>
+                                
+            
+                            </div>
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10 spad-smar">
+                               <div class="row input-group">
+                                <input id="{{act.id_post}}" ng-model="contenido" onkeypress="return press(event)" placeholder="Escribir comentario..." class="form-control" type="text"></input>
+                                <span class="input-group-btn"><button type="button" ng-click="setComentario(act.id_post)" class="btn btn-send">Enviar</button></span>
+                                </div>
+                            </div>
+
+                      </accordion-group>
+                  </div>
+
+              </div>
+              <div class="col-md-12 margin-community"></div>
+            </div> 
+    <accordion> 
+ 
+    </div>
+</div>

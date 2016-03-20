@@ -1,0 +1,54 @@
+<div class="modal-header diego">
+  
+  <div class="row back-title">
+      <div class="col-md-11"><div class="sms-title"><h4>{{song.artist}} - {{song.album}}</h4></div></div>
+      <div class="col-md-1"><span class="glyphicon glyphicon-remove btn-close" ng-click="close()"></span></div>
+  </div>
+</div>
+
+<div class="modal-body">
+    <div class="scrollShow-song">
+            <div class="row song-modal-content">
+                <div class="col-xs-4">
+                   <img src="{{path}}{{song.url_portada}}" class="img-responsive img-modal-cancion">
+                   
+                   <p>Duración: 3:14</p> 
+                   <select class="form-control" type="search" ng-model="userReto">
+                      <option value="">Amigos</option> 
+                      <option ng-repeat="friend in friends" style="color:orange;" value="{{friend.username}}">{{friend.username}}</option >
+                    </select>
+                  
+                </div>
+                <div class="col-xs-8">
+                   <div class="row text-center">
+                       <div class="col-xs-6">
+                           <div class="btn btn-song"><p class="text-center">{{myScore}}</p> <p class="text-center">Mi puntuación</p></div> 
+                           <div class="btn btn-song"  ng-click="gotoGrabaciones()"><p class="text-center">{{numGrab}}</p> <p class="text-center">Grabaciones</p></div>
+                       </div>
+                       <div class="col-xs-6"> 
+                           <div class="btn btn-song" ng-click="gotoUser(userScore)"><p class="text-center">{{highScore}}</p><p class="text-center"> Máx Puntuacion</p></div>
+                           <div class="btn btn-song"><p class="text-center">{{numActv}}</p><p class="text-center"> Veces compartida</p></div>
+                       </div> 
+                   </div>
+                   <div class="row">
+                       <div class="col-xs-12 btns-song">
+                           <div class="col-xs-4">
+                               <div class="btn btn-orange" aria-label="Left Align"  ng-click="sing('puntos')"><p class="text-center"><span class="glyphicon glyphicon-star icon-size-12" aria-hidden="true"></span></p><p class="text-center">Estrella</p> </div>
+                           </div>
+                           <div class="col-xs-4">
+                               <div class="btn btn-orange" ng-click="sing('basico')"><p class="text-center"><span class="glyphicon glyphicon-music icon-size-12" aria-hidden="true"></span></p><p class="text-center"> Cantar</p></div>
+                           </div>
+                           <div class="col-xs-4">
+                               <div class="btn btn-orange" ng-click="sing('reto',friend)"><p class="text-center"><span class="glyphicon glyphicon-user icon-size-12" aria-hidden="true"></span></p><p class="text-center"> Retar</p></div>  
+                           </div> 
+                       </div>
+                       <div class="col-xs-12">
+                           <audio id="audio2" class="audio-viewport" type="audio/mp3"  controls="controls"/>
+                       </div>    
+                   </div>
+                </div>
+            </div>
+
+    </div>
+</div>
+

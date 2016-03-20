@@ -1,0 +1,38 @@
+<div class="modal-header diego">
+	<table class="table-mensaje">
+		<tr class="back-title">
+			<td class="title-table"><div class="sms-title"><h4>Seguidores</h4></div></td>
+			<td><div class="table-close">
+				    <span class="glyphicon glyphicon-remove m10" ng-click="close()"></span>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+</div>
+
+<div class="modal-body row-follow">
+    <div class="scrollShow-follow">  
+           <div class="row spad-smar caja" ng-repeat="follower in followers">
+              <div class="col-xs-1 center-block spad-smar">
+                  <img src="{{path}}{{follower.url_foto}}" class="img-responsive foto-song">
+              </div>
+              <div class="col-xs-5">
+                <p class="mensaje-comunity"><a class="link-orange" ng-click="goTo(follower)"> {{follower.username}}</a></p>
+                  <p class="mensaje-comunity">({{follower.city}}, {{follower.country}}) </p>
+              </div>
+              <div class="col-xs-6 spad-smar">
+                  <div class="row spad-smar">
+                      <div class="col-xs-6 spar-smar"></div>
+                      <div class="col-xs-6 spar-smar"><p class="date-birthay text-gray">{{follower.fech_nac | date:"yy"}} años </p></div>
+                  </div>
+                  <div class="row spad-smar pull-right">
+                      <div class="btn-orange btn-follow btn-orange-msj pull-left" ng-hide="friend.extra" ng-click="mensaje(follower)"><span class="glyphicon glyphicon-envelope"> </span>
+                      </div> 
+                      <div class="btn-orange-follow pull-left" ng-hide="friend.extra" ng-click="editFollow(follower)"><span class="glyphicon glyphicon-user"><span class="{{follower.icon}} btn-text">{{follower.extraDesc}}</span>
+                      </div>
+                  </div>
+              </div>      
+           </div>  
+    </div>
+</div>

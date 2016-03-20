@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-md-5 s5 back-white scroll-mensaje">
+        <div class="modal-header text-blue">Mensajes</div>
+        <div id="conversacion" class="modal-body spad-smar">
+            <div class="form-group" ng-repeat="mensaje in mensajes">
+                <div class="">
+                    <div class="col-xs-2 spad-smar">
+                        <img src="{{path}}{{mensaje.user2.url_foto}}" class="img-responsive img-mensaje">
+                    </div>
+                    <div class="col-xs-10 spad-smar padd-mensaje"  ng-click="refresh(mensaje.user2)">
+                        <div class="col-xs-9 s5 text-over"> 
+                            <h5 class="f-9 c-orange m5">{{mensaje.user2.username}}</h5>
+                            <p class="f-8">{{mensaje.contenido}}</p>
+                        </div>
+                        <div class="date-msj-content col-xs-3 s5">
+                            <p class="f-8 pull-right mensaje-text">{{mensaje.fecha | date:'shortTime'}}</p>
+                        </div>
+                    </div>
+                    <hr class="hr-mensajes col-xs-12">
+                </div>
+            </div>
+        </div>
+        <div class="btn btn-succes" onclick="scrollDown();"> srool down</div>
+    </div>
+    <div class="col-md-7 s5 back-white scroll-mensajes" onload="scrollDown();">
+        <div class="modal-header text-orange">{{user2.username}}</div>
+        <div class="modal-body spad-smar back-conv">
+            <div class="" ng-repeat="mensaje2 in mensajes2">
+               <div class="row">
+                    <span class="{{mensaje2.icon}}"></span> 
+                    <div class="{{mensaje2.tipo}}">
+                        <p class="conversacion f-9">{{mensaje2.contenido}}</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer diego">
+                <div class="col-md-12 spad-smar">
+                    <div class="row input-group">
+                                <input onkeypress="return press(event)" class="form-control" placeholder="Escribir mensaje..."  ng-model="textChat" type="text"></input>
+                                <span class="input-group-btn"><button type="button"  ng-click="sendChat()" class="btn btn-send">Enviar</button></span>
+                    </div>
+                </div>   
+        </div>       
+    </div>
+</div>

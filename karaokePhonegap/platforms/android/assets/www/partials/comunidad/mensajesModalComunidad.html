@@ -1,0 +1,41 @@
+<div class="modal-header diego">
+	<table class="table-mensaje">
+		<tr class="back-title">
+			<td class="title-table"><div class="sms-title"><h4>Mensajes</h4></div></td>
+			<td><div class="table-close">
+				<button type="button" title="Close" ng-click="close()">
+				    <span class="glyphicon glyphicon-remove"></span>
+				</button>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+</div>
+
+
+
+<div class="modal-body diego">
+
+	<div class="form-group" ng-repeat="mensaje in mensajes">
+		<div class="col-xs-2 padd-mensaje">
+			<img src="{{path}}{{mensaje.user2.url_foto}}" class="img-responsive img-mensaje">
+		</div>
+		<div class="col-xs-10 padd-mensaje"  ng-click="lanzarModal(mensaje.user2)">
+		    <div class="text-msj-content col-xs-10"> <h5 class="user-mensaje">{{mensaje.user2.username}}</h5><p class="mensaje-text">{{mensaje.contenido}}</p>
+		    </div>
+		    <div class="date-msj-content col-xs-2">
+		        <p class="date-msj pull-right mensaje-text">{{mensaje.fecha | date:'medium'}}</p>
+		    </div>
+			
+		</div>
+
+		<hr class="form-group hr-msj col-xs-12">
+	</div>
+	
+	
+	
+	
+
+
+</div>

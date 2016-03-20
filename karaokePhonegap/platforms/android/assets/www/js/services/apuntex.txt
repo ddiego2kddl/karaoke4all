@@ -1,0 +1,66 @@
+//Select random from kk_user con limite de 2 usuarios
+SELECT * FROM kk_user ORDER BY RAND() LIMIT 2
+
+
+//Select con subselect "IN" porque devuelve varios valores
+SELECT * FROM kk_post2 WHERE id_user IN (SELECT id_target FROM kk_follow WHERE id_follower=1)
+
+
+//Selecciono los seguidores de mis seguidores (friendsfriends)
+SELECT id_user,username FROM kk_user WHERE id_user IN (SELECT id_target FROM kk_follow WHERE id_follower in (SELECT id_target FROM kk_follow WHERE id_follower= 1))
+
+
+
+            <img src="{{myUser3.url_foto}}" class="img-responsive img-perfil" ng-click="changeFoto()" type="file">
+
+
+VIDEO
+<video src="video.mp4" width="640" height="360" controls autoplay preload></video>
+
+AUDIO
+<audio width="300" height="32" src="{{url}}" controls="controls" preload="" autoplay="true"/ ng-show="url">
+
+
+WATCHER
+    $scope.$watch('srcAudio', function() {    //cuando ala variable srcAudio cambie tal cosa
+       $("audio").attr("src",$scope.srcAudio);
+   });
+
+
+
+
+
+FORMAS DE PRÖMISES CHAINED DE FORMA SECUENCIAL --> USAR $Q_ALL  (PARA LANZARLAS TODAS A LA VEZ)
+
+ /*   var init = function(){
+    	comunidadService.getActividadFriendsBD().then(function(actividadFriends){
+    		comunidadService.getFriendsBD(sessionService.get('id')).then(function(friends){
+    			comunidadService.getGrabacionesFriendsBD().then(function(grabacionesFriends){
+    				comunidadService.getTorneosBD().then(function(torneos){
+    					comunidadService.getFriendsFriendsBD().then(function(friendsfriends){
+    						comunidadService.getDesafiosFriendsBD().then(function(desafiosFriends){
+    							comunidadService.getUserBD(sessionService.get('id')).then(function(user){
+    								comunidadService.getSongsBD().then(function(songs){
+    									$scope.Actividades = comunidadService.makeActividadesShow(actividadFriends.data,friends.data,grabacionesFriends.data,torneos.data,friendsfriends.data,desafiosFriends.data,user.data,songs.data);
+    								})
+    							})
+    						})
+    					})
+    				})
+    			})
+    		})
+    	})
+    }	
+    var init= function(){
+    	console.log("1");
+    	var comunidadService.getActividadFriendsBD().
+    		then(comunidadService.getFriendsBD(sessionService.get("id"))).
+	    		then(comunidadService.getGrabacionesFriendsBD).
+	    		    then(comunidadService.getTorneosBD).
+	    		   		then(comunidadService.getFriendsFriendsBD).
+	    		   			then(comunidadService.getDesafiosFriendsBD).
+	    		   				then(comunidadService.getUserBD(sessionService.get("id"))).
+	    		   					then(function(){
+	    		   						console.log("hola");
+	    		   					});
+    }*/

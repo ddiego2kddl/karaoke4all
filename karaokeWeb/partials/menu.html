@@ -1,0 +1,42 @@
+    <!--
+
+    <nav class="menu spar-smar">
+      <div class="container spar-smar">
+       <div class="row spar-smar">
+           <div class="col-xs-5"><div class="navbar-header"></div></div>
+           <div class="col-xs-2"><a href="#menu/carrusel"><img class="btn-back" src="img/logo.png" alt=""></a></div>
+               <div class="col-xs-5"><div ng-click="logout()">
+                    <span class="glyphicon glyphicon-off pull-right icon-white icon-" aria-hidden="true"></span>
+                   </div>
+               </div>
+       </div>
+      </div>
+    </nav>
+    
+    -->
+    
+
+  <nav class="navbar navbar-default menu spad-smar">
+  <div class="container-fluid w70">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img class="img-responsive" src="img/logo.png" alt=""></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href="#menu/carrusel">Inicio</a></li>
+        <li ><a href="#menu/canciones">Canciones</a></li>
+        <li><a href="#menu/comunidad/actividadComunidad">Comunidad</a></li>
+        <li><a href="#menu/grabaciones">Grabaciones</a></li>
+       
+      </ul>
+    <div ng-click="logout();" class="logout pull-right">Salir  <span class="glyphicon glyphicon-log-out"></span></div>
+    </div><!-- /.navbar-collapse -->
+    
+  </div><!-- /.container-fluid -->
+</nav>
+  
+  
+   <div ui-view class="mainPanel"></div>

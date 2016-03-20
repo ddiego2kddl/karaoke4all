@@ -1,0 +1,50 @@
+
+
+<div class="content-fluid">
+    <div class="row back-white">
+       <div class="col-md-7"><p class="promotional-text">Usuarios a los que estas siguiendo</p></div>
+        <div class="col-md-5">
+           <div class="input-group search-user">
+                  <span class="input-group-addon glyphicon glyphicon-search" ></span>
+                  <input type="text" class="form-control" placeholder="Buscar usuario" aria-describedby="sizing-addon2" ng-model="search">
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-show-user">
+         <div class="user-box" ng-repeat="friend in friends | filter:search">
+             <div class="roll-user">
+                
+                <div class="col-md-2 center-block spad-smar">
+                     <img src="{{path}}{{friend.url_foto}}" class="img-responsive img-usuario">
+                 </div>
+                 <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-7"><h4 class=""><a class="link-orange" ng-click="goTo(friend)"> {{friend.username}}</a></h4><p>{{friend.fech_nac  | date:"yy"}} años - {{friend.country}} - {{friend.city}}</p></div>
+                        <div class="col-md-5 content-btns-user"><div class="row">
+                            <div class="btn btn-send-sms" ng-click="mensaje(friend)"><span class="glyphicon glyphicon-envelope"> </span></div>
+                        </div><div class="row">
+                            <div class="btn btn-follow-user" ng-hide="friend.extra" ng-click="quitFollow(friend)"><span class="glyphicon glyphicon-ok"><span class="glyphicon glyphicon-user"></span>Siguiendo</div>
+                        </div></div>
+                       
+                    </div>
+                    
+                </div>
+                
+             </div>
+             <hr class="hr-orange">
+         </div>
+         
+         <div class="row spad-smar">
+              <div class="col-xs-12 more">
+                  <div class="col-xs-4"></div>
+                  <div class="col-xs-4" ng-show="showCheck" ng-click="showMore()"><p  class="link-orange center-block" aria-hidden="true">Mostrar  <span class="glyphicon glyphicon-plus icon-orange"></span></p>
+                  </div>
+                  
+                  <div class="col-xs-4"></div>
+              </div> 
+        </div> 
+          
+    </div>
+
+</div>

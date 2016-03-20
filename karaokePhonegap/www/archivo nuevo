@@ -1,0 +1,24 @@
+select DISTINCT id_recepter from kk_mensaje where id_sender = 1
+
+
+select id_mensaje,fecha,id_recepter,contenido from kk_mensaje where id_sender = 1 and id_recepter in
+(select DISTINCT id_recepter from kk_mensaje where id_sender = 1)
+
+select * from kk_mensaje where id_sender = 1 and fecha in
+(select max(fecha) from kk_mensaje where id_sender = 1 group by id_recepter order by fecha)
+
+
+
+select * from kk_mensaje where id_sender = 1 and fecha in
+(select max(fecha) from kk_mensaje where id_sender = 1 group by id_recepter order by fecha) group by fecha
+
+
+
+select * from kk_mensaje where id_sender = 1 and fecha in
+(select max(fecha) from kk_mensaje where id_sender = 1 group by id_recepter order by fecha) order by id_mensaje DESC group by id_mensaje
+
+
+
+select * from kk_mensaje where id_mensaje in
+(select max(id_mensaje) from kk_mensaje where fecha in
+(select max(fecha) from kk_mensaje where id_sender = 1 group by id_recepter order by fecha) group by fecha)

@@ -1,0 +1,48 @@
+
+<div class="content-fluid hola">
+    <div class="row center-block comunity-div-title">
+        <h6 class="comunity-title">{{mensajeMuro}}</h6>
+    </div>
+
+    <div class="scrollShow">
+      <accordion> 
+           <div class="row spar-smar muro-box" ng-repeat="act in Actividades">
+              <div class="col-xs-1 spad-smar center-block">
+                  <img src="{{act.url_foto}}" class="img-responsive foto-perfil">
+              </div>
+              <div class="col-xs-11">
+                  <p class="mensaje-comunity"><a class="link-orange" ng-click="goTo(act.id_user)">{{act.nombreUser}}</a> {{act.descripcion}} <a>{{act.extra}}</a> {{act.extra2en}} <a>{{act.extra2}}</a></p>
+                  <p class="date-comunity">{{act.fecha | date:"shortTime"}}</p>
+              </div>
+              <hr class="col-xs-12 hr-orange spad-smar">
+              <div class="row spad-smar">
+
+                  <div class="col-xs-12 spad-smar">
+                      <accordion-group  id="comentarios" ng-click="getComentarios(act.id_post)" heading="Comentarios" class="row spad-smar" style="text-align:center;max-height:180px;overflow-y:scroll;">
+
+                            <div ng-repeat="comentario in comentarios" class="col-xs-12 row spad-smar" style="text-align:left;">
+                                <div class="col-xs-1 center-block spad-smar">
+                                    <img src="{{comentario.url_foto}}" class="img-responsive foto-perfil">
+                                </div>
+                                <div class="col-xs-11">
+                                    <p class="col-xs-12 spad-smar"><a>{{comentario.username}} </a> {{comentario.contenido}}</p>
+                                    <h6 class="col-xs-12 spad-smar" >{{comentario.fecha}}</h6>
+                                </div>
+                                
+                                <hr class="col-xs-12 spad-smar hr-orange">
+                            </div>
+
+                            <div class="col-xs-12 row spad-smar">
+                                <input  class="col-xs-10 spad-smar" id="{{act.id_post}}" ng-model="contenido" type="text" style="width:80%"></input>
+                                <button class="col-xs-2" ng-click="setComentario(act.id_post)">Enviar</button>
+                            </div>
+
+                      </accordion-group>
+                  </div>
+
+              </div>
+            </div> 
+    <accordion> 
+ 
+    </div>
+</div>

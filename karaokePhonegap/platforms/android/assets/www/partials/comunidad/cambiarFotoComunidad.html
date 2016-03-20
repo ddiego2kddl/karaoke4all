@@ -1,0 +1,30 @@
+<div class="modal-header diego">
+	<table class="title-modal">
+		<tr>
+			<td width="96%"><h4 class="pad-title-modal">Actualizar foto del perfil</h4></td>
+			<td width="4%">
+			<div ng-click="close()"><span class="glyphicon glyphicon-remove pull-rigth"></span></div>
+			</td>
+		</tr>
+	</table>
+
+</div>
+
+<div class="modal-body diego">
+	
+	<div class="container">
+		<h4 class="link-orange padding-modal-subtitle">{{myUser3.username}}</h4>
+		<div class="row spad-smar">
+            <div class="col-xs-6"><img src="{{myUser3.url_foto}}" class="img-responsive img-change-foto-current"></div>
+		    <div class="col-xs-6 col-upload-image">
+		    <div class="position-icon-foto"><span class="glyphicon-plus glyphicon"> Subir Foto</span></div>
+		    <input type="file" name="file" class="input-foto" onchange="angular.element(this).scope().uploadFile(this.files)"/></div>
+		</div>
+		<div class="row spad-smar">
+		     <div class="col-xs-6"></div>
+		    <div class="col-xs-6 col-upload-image" ng-click="takeFoto()"><div class="position-icon-foto"><span class="glyphicon-camera glyphicon"> Tomar Foto</span></div> </div>
+		
+		</div>
+	
+	</div>
+</div>

@@ -1,0 +1,43 @@
+<div class="modal-header diego">
+	<table class="table-mensaje">
+		<tr class="back-title">
+			<td class="title-table"><div class="sms-title"><h4>Siguiendo</h4></div></td>
+			<td><div class="table-close">
+				    <span class="glyphicon glyphicon-remove m10" ng-click="close()"></span>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+</div>
+
+<div class="modal-body row-follow">
+    <div class="scrollShow-follow">  
+           <div class="row spad-smar caja" ng-repeat="friend in friends">
+              <div class="col-xs-1 center-block spad-smar">
+                  <img src="{{path}}{{friend.url_foto}}" class="img-responsive foto-song">
+              </div>
+              <div class="col-xs-5">
+                  <p class="mensaje-comunity"><a class="link-orange" ng-click="goTo(friend)"> {{friend.username}}</a></p>
+                  <p class="text-gray">({{friend.city}}, {{friend.country}}) </p>
+              </div>
+              <div class="col-xs-6 spad-smar">
+                  <div class="row spad-smar">
+                     <div class="col-xs-6"></div>
+                     <div class="col-xs-6 spad-smar"><p class="date-birthay text-gray">{{friend.fech_nac  | date:"yy"}} años </p></div>
+                  </div>
+                  <div class="row spad-smar pull-right">
+                      <div class="btn-orange pull-left btn-orange-msj" ng-hide="friend.extra" ng-click="mensaje(friend)"><span class="glyphicon glyphicon-envelope"> </span></div> 
+              	    <div class="btn-orange-follow pull-left" ng-hide="friend.extra" ng-click="quitFollow(friend)"><span class="glyphicon glyphicon-ok"><span class="glyphicon glyphicon-user"></span>Siguiendo</div>
+                  </div>
+              </div> 
+              
+              
+              
+              
+                    
+           </div>  
+    </div>
+</div>
+
+

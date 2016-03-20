@@ -1,0 +1,79 @@
+
+<div class="content-fluid back-white hola">
+    <div class="row center-block">
+        
+        <div class="row back-title">
+           <div class="col-md-4"> <h3>Canciones</h3></div>
+           
+            <div class="col-md-8"><audio class="audio-viewport" type="audio/mp3" height="32" controls="controls" preload="" autoplay="true" ng-show="srcAudio"/></div>
+             
+        </div>
+         <div class="row song-filters">
+        		
+        		
+         		<div class="col-md-4 center-block">
+                      <div class="input-group">
+                          <span class="input-group-addon glyphicon glyphicon-search" ></span>
+                          <input type="text" class="form-control" placeholder="Cancion" aria-describedby="sizing-addon2" ng-model="search.title">
+                    </div>
+	            </div>
+
+	            <div class="col-md-3 center-block">
+                      <div class="input-group">
+                          <span class="input-group-addon glyphicon glyphicon-search" ></span>
+                          <input type="text" class="form-control" placeholder="Artista" aria-describedby="sizing-addon2" ng-model="search.artist">
+                    </div>
+	            </div>
+
+	            <div class="col-md-2 center-block">
+	                   <select class="form-control" type="search"  placeholder="Genero" ng-model="search.style">
+	                   			<option value="">Genero</option selected>
+	                   			<option ng-repeat="estilo in estilos"  value="{{estilo.estilo}}">{{estilo.estilo}}</option >
+						</select>
+	            </div>
+
+	            <div class="col-md-2 center-block">
+	                   <select class="form-control" type="search" placeholder="Idiomas" ng-model="search.language">
+	                   			<option value="">Idiomas</option selected>
+	                   			<option ng-repeat="idioma in idiomas" style="color:orange;" value="{{idioma.desc}}">{{idioma.desc}}</option >
+						</select>
+	            </div>
+	            <div class="col-md-1 col-xs-12">
+	                <div class="btn-trash" ng-click="cleanSearch()"><span class="glyphicon glyphicon-trash trash" ></span></div>
+	            </div>
+         </div>
+    </div>
+    <div class="row scroll-show-song">
+        <div class="col-md-8">
+                <div class="row scroll-viewport-song" ng-repeat="song in songs | filter:search:strict">
+                <div class="col-md-2 col-xs-6">
+                    <img src="{{path}}{{song.url_portada}}" class="img-responsive foto-song">
+                </div>
+                <div class="col-md-7 col-xs-6">
+                   <div class="row">
+                       <p class="mensaje-comunity"><a class="link-orange" ng-click="modalSong(song)">{{song.title}}</a> - <a ng-click="search.artist = song.artist"> {{song.artist}}</a>    ({{song.fech_song}}) </p>
+                   </div>
+                   <div class="row mensaje-comunity">
+                       <p>
+                           <a ng-click="search.style = song.style">{{song.style}}</a> - <a ng-click="search.language = song.language">{{song.language}}</a>
+                       </p>
+                   </div>
+                    	               
+                </div>
+                <div class="col-md-1 col-xs-12">
+                    <div class="btn-songs" ng-click="play(song)"><span class="glyphicon glyphicon-music" ></span></div>
+                </div>
+ 
+                <div class="col-md-1 col-xs-12">
+                    <div class="btn-songs" ng-click="modalSong(song)"><span class="glyphicon glyphicon-record" ></span></div>
+                </div>
+                    <div class="col-md-1 col-xs-12"><div class="hr-orange hr-orange-2"></div></div>
+            </div> 
+            
+        </div>
+        <div class="col-md-4 publicidad">
+            <h1>Publicidad</h1>
+        </div>
+    </div>
+
+</div>

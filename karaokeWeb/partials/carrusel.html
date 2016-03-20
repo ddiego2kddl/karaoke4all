@@ -1,0 +1,48 @@
+
+
+<div class="row spad-smar">
+    <div class="back-title">
+        <h3>Canciones mas populares</h3>
+    </div>
+</div>
+<div class="row spad-smar back-white">
+
+    <div ng-repeat="song in songs2" class="pull-left content-song" >
+
+        <div class="song" ng-click="modalSong(song)">
+           <img src="{{path}}{{song.url_portada}}" alt="" class="img-responsive img-song-list">
+            <p></p>
+            <p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>{{song.cont}}</p>
+            <p >{{song.title}}</p>
+            <p>{{song.artist}}</p>
+            <p>{{song.fecha}}</p>
+        </div>
+    </div>
+  
+</div>
+<div class="row">
+        <hr class="hr-orange-song back-white">
+</div>
+
+<div class="row spad-smar">
+    <div class="back-title">
+        <h3>Ultimas novedades</h3>
+    </div>
+</div>
+<div class="row spad-smar back-white">
+
+    <div ng-repeat="song in songs" class="pull-left content-song" >
+        <div class="song">
+           <img src="{{path}}{{song.url_portada}}" alt="" class="img-responsive img-song-list">
+            <p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>{{song.cont}}</p>
+            <p>{{song.title}}</p>
+            <p>{{song.artist}}</p>
+            <p>{{song.fecha}}</p>
+
+        </div>
+    </div>
+
+</div>
+<div class="row">
+        <hr class="hr-orange-song">
+</div>

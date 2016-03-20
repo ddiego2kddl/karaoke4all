@@ -1,0 +1,34 @@
+<div class="form-group spad-smar">
+	
+	<div class="col-xs-2 spad-smar col-perfil-left">
+        <div class="perfil-content">
+        <img src="{{myUser3.url_foto}}" class="img-responsive img-perfil center-block" ng-click="lanzarModal('cambiarFotoModalComunidadCtrl','partials/comunidad/cambiarFotoComunidad.html')">
+            <p class="name-user">{{myUser3.username}}</p>
+            <hr class="hr">
+            <div class="form-group">
+                <button class="btn btn-perfil btn-responsive col-xs-12" ng-click="lanzarModal('siguiendoModalComunidadCtrl','partials/comunidad/siguiendoModalComunidad.html')">Siguiendo</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-perfil btn-responsive col-xs-12" ng-click="lanzarModal('seguidoresModalComunidadCtrl','partials/comunidad/seguidoresModalComunidad.html')">Seguidores</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-perfil btn-responsive col-xs-12" ng-click="lanzarModal('mensajesModalComunidadCtrl','partials/comunidad/mensajesModalComunidad.html')">Mensajes</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-perfil btn-responsive col-xs-12" ng-click="lanzarModal('notificacionesModalComunidadCtrl','partials/comunidad/notificacionesModalComunidad.html')">Notificaciones</button>
+            </div>
+		</div>
+	</div>
+	
+	<div class="col-xs-10 pad-comunity content-right-comunity col-perfil-right back-foto-comunity img-responsive"> 
+		<div class="balls">
+			<a><img  ng-click="goTo('/menu/comunidad/actividadComunidad')" class="carusel-option" src="img/esfera.png"></a>
+			<a><img  ng-click="goTo('/menu/comunidad/muroComunidad')" class="carusel-option" src="img/esfera.png"></a>
+			<a><img  ng-click="goTo('/menu/comunidad/usuariosComunidad')" class="carusel-option" src="img/esfera.png"></a>
+			<a><img  ng-click="goTo('/menu/comunidad/perfilComunidad')" class="carusel-option" src="img/esfera.png"></a>
+			<a><img  ng-click="goTo('/menu/comunidad/configuracionComunidad')" class="carusel-option" src="img/esfera.png"></a>
+		</div>
+		<div ui-view></div>
+	</div>
+
+</div>

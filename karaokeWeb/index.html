@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="karaokeApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Karaoke4all - SingingRedHappyFlower</title>
+    <link data-require="ng-table@*" data-semver="0.3.1" rel="stylesheet" href="http://bazalt-cms.com/assets/ng-table/0.3.1/ng-table.css" />
+	<link rel='stylesheet' href='css/bootstrap.css'>
+	<link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+    <div class="fullScreen">
+	<div ui-view></div>
+     </div>   
+
+	<!-- LIBRERIAS -->
+	<script src='lib/angular.min.js'></script>
+	<script src='lib/angular-ui-router.min.js'></script>
+	<script src="lib/jquery.min.js"></script>
+	<script src="lib/bootstrap.min.js"></script>
+	<script src="lib/ui-bootstrap.min.js"></script>
+	<!-- GRABACION DE AUDIO -->
+
+     <!--<script src="//cdn.webrtc-experiment.com/RecordRTC.js"> </script>-->
+    <script src="js/ffmpeg_asm.js"></script>
+    <script src="js/recorderjs/recorder.js"></script>
+    <script src="js/recorderjs/recorderWorker.js"></script>
+ 
+
+
+	<!-- SCRIPT PRINCIPAL -->
+	<script src='js/app.js'></script>
+	
+	<!-- SCRIPT JQUERY - MANEJADOR DE EVENTOS -->
+
+
+	<!-- DIRECTIVAS -->
+	<script src='js/directives/loginDirective.js'></script>
+
+	
+	<!-- SERVICES -->
+	<script src='js/services/loginService.js'></script>
+	<script src='js/services/sessionService.js'></script>
+	<script src='js/services/comunidadService.js'></script>
+	<script src='js/services/cancionesService.js'></script>
+	<script src='js/services/grabacionesService.js'></script>
+
+	<!-- CONTROLLERS -->
+	<script src='js/controllers/loginCtrl.js'></script>
+	<script src='js/controllers/menuCtrl.js'></script>
+	<script src='js/controllers/carruselCtrl.js'></script>
+	<script src='js/controllers/comunidadCtrl.js'></script>
+	<script src='js/controllers/cancionesCtrl.js'></script>
+	<script src='js/controllers/grabacionesCtrl.js'></script>
+    <footer class="footer">
+        <div class="row letter-footer text-center back-white foo f-8">
+            <p>El permiso para distribuir la música en este servicio de Internet ha sido concedida por 
+            <a href="http://www.stim.se" target="_top">STIM/NCB</a>, 
+            <a href="http://www.bmi.com" target="_top">BMI</a>, 
+            <a href="http://www.ascap.com" target="_top">ASCAP</a>, 
+            <a href="http://www.sgae.es" target="_top">SGAE</a>.
+            </p>
+            <p>
+                Toda la música en este sitio son versiones hechas por músicos profesionales y no el artista original .
+                <br>
+                Los nombres de los artistas originales se muestran únicamente con fines informativos y no representan el músico ejecutante
+            </p>
+            <p>
+                <a href="/template/acerca" target="_top">Acerca</a> | 
+                <a href="/template/acerca" target="_top">Codigo de conducta</a> | 
+                <a href="/template/acerca" target="_top">Terminos de uso</a> | 
+                <a href="/template/acerca" target="_top">Politica de privacidad</a> | 
+                <a href="/template/acerca" target="_top">Contactenos</a>
+                
+            </p>
+            <p>
+                Un servicio de <a href="http://www.karaoke4all.es" target="_top">Karaoke4all</a> © Copyright 2015. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+

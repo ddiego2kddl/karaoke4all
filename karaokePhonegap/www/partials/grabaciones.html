@@ -1,0 +1,109 @@
+<div class="content-fluid hola">
+    <div class="row center-block back-white">
+	    <div class="row spar-smar comunity-div-title" style="text-align:center;">
+	        <div class="col-xs-4">
+	        <h6 class="comunity-title col-xs-4">GRABACIONES</h6>
+	        </div>
+	        <div class="col-xs-2"></div>
+	        <div class="col-xs-6">
+	          <audio class="audio-viewport" type="audio/mp3" height="32" controls="controls" preload="" autoplay="true" ng-show="srcAudio"/>
+	        </div>
+	    </div>
+         <div class="row rec-filters" style="text-align:center;">
+                <div class="col-xs-2 center-block spad-smar">
+	                   <select class="form-control" type="search"  ng-model="search.grab_view">
+	                   			<option  value="">Todas</option selected>
+	                   			<option  value="1">Mi Circulo</option>
+	                   			<option  value="2">Mias</option>
+						</select>
+	            </div>
+	            <div class="col-xs-2 center-block spad-smar">
+                      <div class="right-inner-addon">
+                           <span class="glyphicon glyphicon-search"></span>
+                           <input class="form-control" type="search"  placeholder="Cancion" ng-model="search.song_title"></input>
+	                  </div>
+	            </div>
+	            <div class="col-xs-2 center-block spad-smar">
+                      <div class="right-inner-addon">
+                           <span class="glyphicon glyphicon-search"></span>
+                           <input class="form-control" type="search"  placeholder="Artista" ng-model="search.song_artist"></input>
+	                  </div>
+	            </div>
+	            <div class="col-xs-2 center-block spad-smar">
+                      <div class="right-inner-addon">
+                           <span class="glyphicon glyphicon-search"></span>
+                           <input class="form-control" type="search"  placeholder="Usuario" ng-model="search.user_name"></input>
+	                  </div>
+	            </div>
+	            <div class="col-xs-2 center-block spad-smar">
+	                   <select class="form-control" type="search"  ng-model="search.song_language">
+	                   			<option style="color:orange;" value="">Idiomas</option selected>
+	                   			<option ng-repeat="idioma in languages" style="color:orange;" value="{{idioma.desc}}">{{idioma.desc}}</option >
+						</select>
+	            </div>
+	           <div class="col-xs-2 center-block spad-smar">
+	                   <select class="form-control" type="search"  ng-model="search.song_estilo">
+	                   			<option style="color:orange;" value="">Genero</option selected>
+	                   			<option ng-repeat="estilo in estilos" style="color:orange;" value="{{estilo.estilo}}">{{estilo.estilo}}</option >
+						</select>
+	            </div>
+	            
+         </div>
+    </div>
+
+    <div class="scrollShow">
+    	<accordion>
+           <div class="row scroll-viewport caja" ng-repeat="grab in grabaciones | filter:search:strict">
+
+	              <div class="col-xs-2">
+	                  <img src="{{path}}{{grab.user_foto}}" class="img-responsive foto-song">
+	              </div>
+	              <div class="col-xs-7">
+	                    <p class="mensaje-comunity"><a class="link-orange" ng-click="goTo(grab.id_user)"> {{grab.user_name}}</a>  en la cancion <a> {{grab.song_title}}</a> - <a>{{grab.song_artist}} </a></p>
+	                    <p class="record-text">{{grab.desc}}</p>
+	                	<p class="date-comunity">{{grab.fecha | date:'shortDate'}}</p>
+	              
+	              </div> 
+	              <div class="col-xs-1 center-block spad-smar"> </div>
+	               <div class="col-xs-2 center-block spad-smar icon-middle">
+	                  <span class="glyphicon glyphicon-play" ng-click="play(grab)"></span>
+	              </div>
+	            
+	              <hr class="col-xs-12 spad-smar hr-orange">
+	              
+	              <div class="row spad-smar">
+
+		                  <div class="col-xs-12 spad-smar">
+		                      <accordion-group  id="comentarios" ng-click="getComentarios(grab.id_grabacion)" heading="Comentarios" class="row spad-smar" style="text-align:center;max-height:180px;overflow-y:scroll;">
+
+		                            <div ng-repeat="comentario in comentarios" class="col-xs-12 row spad-smar" style="text-align:left;">
+		                                <div class="col-xs-1 center-block spad-smar">
+		                                    <img src="{{comentario.url_foto}}" class="img-responsive foto-perfil">
+		                                </div>
+		                                <div class="col-xs-11">
+		                                    <p class="col-xs-12 spad-smar"><a>{{comentario.username}} </a> {{comentario.contenido}}</p>
+		                                    <h6 class="col-xs-12 spad-smar" >{{comentario.fecha}}</h6>
+		                                </div>
+		                                
+		                                <hr class="col-xs-12 spad-smar hr-orange">
+		                            </div>
+
+		                            <div class="col-xs-12 row spad-smar">
+		                                <input  class="col-xs-10 spad-smar" id="{{grab.id_grabacion}}" ng-model="contenido" type="text" style="width:80%"></input>
+		                                <button class="col-xs-2" ng-click="setComentario(grab.id_grabacion)">Enviar</button>
+		                            </div>
+
+		                      </accordion-group>
+		                  </div>
+
+              		</div>
+
+	             <hr class="col-xs-12 spad-smar hr-gray">
+
+            </div> 
+
+        </accordion>
+
+    </div>
+
+</div>

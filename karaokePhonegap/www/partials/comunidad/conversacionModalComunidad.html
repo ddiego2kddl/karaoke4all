@@ -1,0 +1,38 @@
+<div class="modal-header diego">
+	<table style="margin-left:15px; width:100%;">
+		<tr>
+			<td width="90%"><h4>{{user2.username}}</h4></td>
+			<td width="10%">
+				<button type="button" title="Close" class="col-xs-1" ng-click="close()">
+				    <span aria-hidden="true">&times;</span>
+				    <span class="hide">Close</span>
+				</button>
+			</td>
+		</tr>
+	</table>
+
+</div>
+
+<div class="modal-body modal-Conversacion">
+	<div class="container" ng-repeat="mensaje in mensajes">
+		<div class="{{mensaje.tipo}}">
+			<p>{{mensaje.contenido}}</p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="modal-footer diego">
+		<table>
+			<tr>
+				<td width="90%">
+					 <input type="text" class="form-control" placeholder="Escribir mensaje......" ng-model="textChat">
+				</td>
+				<td>
+					 <button class="btn btn-primary" ng-click="sendChat()" ng-disabled="formNewClient.$invalid">Enviar</button>
+				</td width="10%">
+			</tr>
+		</table>   
+</div>
+

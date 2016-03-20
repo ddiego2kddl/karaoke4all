@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="karaokeApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Karaoke4all - SingingRedHappyFlower</title>
+    <link data-require="ng-table@*" data-semver="0.3.1" rel="stylesheet" href="http://bazalt-cms.com/assets/ng-table/0.3.1/ng-table.css" />
+	<link rel='stylesheet' href='css/bootstrap.css'>
+	<link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+
+	<div ui-view class="fullScreen"></div>
+
+	<!-- LIBRERIAS -->
+	<script src='lib/angular.min.js'></script>
+	<script src='lib/angular-ui-router.min.js'></script>
+	<script src="lib/jquery.min.js"></script>
+	<script src="lib/bootstrap.min.js"></script>
+	<script src="lib/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+	<!-- SCRIPT PRINCIPAL -->
+	<script src='js/app.js'></script>
+
+	<!-- DIRECTIVAS -->
+	<script src='js/directives/loginDirective.js'></script>
+
+	
+	<!-- SERVICES -->
+	<script src='js/services/loginService.js'></script>
+	<script src='js/services/sessionService.js'></script>
+	<script src='js/services/comunidadService.js'></script>
+	<script src='js/services/cancionesService.js'></script>
+	<script src='js/services/grabacionesService.js'></script>
+
+	<!-- CONTROLLERS -->
+	<script src='js/controllers/loginCtrl.js'></script>
+	<script src='js/controllers/menuCtrl.js'></script>
+	<script src='js/controllers/carruselCtrl.js'></script>
+	<script src='js/controllers/comunidadCtrl.js'></script>
+	<script src='js/controllers/cancionesCtrl.js'></script>
+	<script src='js/controllers/grabacionesCtrl.js'></script>
+
+
+</body>
+</html>

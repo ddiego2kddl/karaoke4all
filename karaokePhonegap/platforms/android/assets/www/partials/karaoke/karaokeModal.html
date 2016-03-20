@@ -1,0 +1,64 @@
+
+
+<div >
+	<table class="table-mensaje">
+		<tr class="back-title">
+			<td class="title-table"><div class="sms-title"><h4>Karaoke</h4></div></td>
+			<td><div class="table-close">
+				    <span class="glyphicon glyphicon-remove m10" ng-click="close()"></span>
+				</div>
+			</td>
+		</tr>
+	</table>
+	    <div class="row"  ng-show="playing">
+	        <div class="col-xs-9">
+	            
+	            <div class="embed-responsive embed-responsive-16by9">
+                       <video id="video" class="embed-responsive-item karaoke-video" src="srcVideo" frameborder="0" allowfullscreen></video>
+                </div>
+	        </div>
+	        <div class="col-xs-3"> 
+                  <h4>Modo Karaoke</h4>
+                  <p>Canta y disfruta de tu cancion favorita</p>
+                  <div class="row margin-bott-6" ng-hide="started">
+                     <div class="col-xs-12"><div class="btn btn-lg btn-success" ng-click="grabar()"><span class="glyphicon glyphicon-record" > </span>  Grabar</div></div>         
+                  </div>
+
+                  <div class="row margin-bott-6" ng-show="started">
+                     <div class="col-xs-12"><div class="btn btn-lg btn-success" ng-click="fullScreen()"><span class="glyphicon glyphicon-record" > </span>  FullScreen</div></div>         
+                  </div>
+
+                  <div class="row margin-bott-6" ng-show="started">
+                     <div class="col-xs-12"><div class="btn btn-lg btn-danger" ng-click="stop()"><span class="glyphicon glyphicon-remove" > </span>   Cancelar</div></div>
+                  </div> 
+                  
+	        </div>
+	              
+	    </div>
+
+	    <div class="row" ng-hide="playing" style="margin-left:1em;">
+	    	<h1>Grabacion Finalizada</h1>
+
+            <div class="row margin-bott-6">
+            		<div class="col-xs-3">Reproducir:</div>
+                     <div class="col-xs-3"><div class="btn btn-lg btn-success" ng-click="playRecord()"><span class="glyphicon glyphicon-record" > </span>  PLAY</div></div>
+
+                     <div class="col-xs-3"><div class="btn btn-lg btn-success" ng-click="pauseRecord()"><span class="glyphicon glyphicon-record" > </span>  PAUSE</div></div> 
+
+                     <div class="col-xs-3"><div class="btn btn-lg btn-success" ng-click="stopRecord()"><span class="glyphicon glyphicon-record" > </span>  STOP</div></div> 
+
+                     <div class="col-xs-12">Compartir: <input type="checkbox" ng-model="compartirCheck" ng-checked="true"/></div>
+
+                     <div class="col-xs-2">Comentario:</div>
+                     <div class="col-xs-10"><textarea rows="4" cols="50" ng-model="comentario" ng-disabled="!compartirCheck" placeholder="Escribe aqui tu comentario sobre esta grabacion"></textarea></div>
+					<br>
+                     <div class="col-xs-12" style="text-align:center;"><div class="btn btn-lg btn-success" ng-show="compartirCheck" ng-click="compartir()"><span class="glyphicon glyphicon-record" > </span>  Compartir</div></div>
+                     
+					 <div class="col-xs-12" style="text-align:center;"><div class="btn btn-lg btn-danger" ng-hide="compartirCheck" ng-click="close()"><span class="glyphicon glyphicon-remove" > </span>   Salir</div>  </div> 
+
+            </div>
+
+	    </div>
+		
+
+</div>

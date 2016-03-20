@@ -1,0 +1,333 @@
+/***** POR CORROBORAR *******/
+.text-08{ font-size: .8em}
+.text-06{font-size: .6em;}
+.letter-white{color: white;}
+.hola{height: 270px;}
+.butt-1{padding-top: .8em;}
+.margin-bott-6{margin-bottom: .6em;}
+
+
+/******  INICIO Y REGISTRO *****/ 
+.center-padding {
+margin: 0 auto;
+    width: 70%;
+}
+.login-content{ background-color: rgb(195, 81, 0); color: white; }
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {color: black;cursor: default;background-color: white;border: 2px solid white;border-bottom-color: transparent;}
+.nav > li > a:hover, .nav > li > a:focus {text-decoration: none; background-color:#FF8000;}
+.nav-tabs > li > a { margin-right: 2px;line-height: 1.42857143;border: 1px solid transparent;      border-radius: 4px 4px 0 0;color: white;}
+.tab-content{padding-top: 1em;}
+.social-order>div {}
+.social-design>img{border-radius: 8px;}
+
+
+
+/****   ETIQUETAS ****/ 
+body{height: 100%; background-color: #FF8000; }
+input[disabled]{ border: 0; background-color: white; line-height: 1; text-align: right; }
+input[type=date]{margin: 0;padding: 0; line-height: 1;}
+input-2em{height: 1.8em;margin-top: 10px;}
+
+
+
+/****** GENERALES *****/
+
+.spad-smar{margin:0 0; padding:0 0;}
+.btn{ padding: 6px 5px; font-size: 12px; text-align: left;}
+.link-blue{ color: #5088d2;}
+.link-orange{color: #dd7723;}
+.link-white{color: white;}
+.hr{ margin-top: 0px;margin-bottom: 5px; color: #dd7723; border: solid 1px white;}
+.hr-orange{border: 0; border-top: 2px solid #dd7723;}
+.hr-gray{border: 0; border-bottom: .3em solid gray;}
+.icon-orange-perfil{color: #dd7723;  line-height: 1; top: .9em; right: -2em}
+.icon-orange{color: #dd7723;}
+.icon-space{width: 4%;}
+.title-modal{background-color: #dd7723; padding-left: .5em; color: white;width: 100%;}
+.padding-modal-subtitle{padding-top: .3em; padding-bottom: .3em;}
+.back-white{background-color: white;}
+.form-control-30px
+{
+margin-top: 4px;
+height: 25px;
+}
+.back-white{background-color: white;}
+
+.icon-white{ color: white; margin-top: .4em;font-size: 1.5em;}
+
+
+
+
+/****** CARUSEL   *****/
+.carusel-option{width: 12px;}
+.carusel-content{ margin-top: 2em;}
+.carusel-menu{width: 20%;}
+
+
+
+/******** PERFIL *****/
+.options-perfil{font-size: .9em; margin: 6px 5px 3px;}
+.perfil-edit{color: grey;}
+.img-perfil{padding-top:.2em ; max-height: 7em; }
+.perfil-content{color: white;}
+.btn-perfil{ color: #5088d2; background-color: white; border: solid 1px chocolate; border-radius: 0px; padding: .3em; margin-bottom: .1em;}
+.col-perfil-left{width:  19.8%; padding-left: .7em; padding-right: .7em; padding-top: .4em;}
+.col-perfil-right{width:  80%;}
+.date-input{ width: 100%;}
+.name-user{margin-top: .3em;}
+
+/****** MENU  *******/ 
+.navbar-static-bottom{}
+.menu{background-color: black; border-top: 5px solid white; width: 100%; height: 40px; }
+.btn-back{ width: 60%; bottom: -30px; z-index: 3; position: absolute;}
+.content-right-comunity{ background-color: #999494;}
+.logo{}
+.menu-footer{ }
+
+
+/***** COMUNIDAD ******/
+.comunity-div-title{ background-color: #FF8000; color:white; padding-left: .5em;margin-bottom: .3em;}
+.comunity-title{margin-top: 7px; margin-bottom: 7px; padding: 3px;}
+.pad-comunity{padding-left: 10px; padding-right: 10px;}
+.date-comunity{ font-size: .7em; color:#999494; margin-bottom: .3em;}
+.foto-perfil{margin-top: .3em;margin-left: .3em;margin-bottom: .3em; max-height: 40px;}
+.mensaje-comunity{ margin-top: .2em; margin-bottom: .3em;  }
+.comment{text-align: center;}
+
+
+.row-follow{padding-left: 0px; padding-right:0px;}
+
+
+/**** botones  ***/
+.btn-orange-follow{ margin-left: .3em;
+ letter-spacing: -1px; width: 8.4em; padding: .2em .2em;margin-bottom: 3px; background-color:#dd7723; color: white; font-size: .9em;margin-right: .3em;}
+.btn-orange{padding: .4em .5em; background-color:#dd7723; color: white; font-size: .9em;margin-right: 1em;}
+.peke{width: 70%;}
+.btn-orange-msj{width: 2.5em;text-align: center;  padding: .2em .2em; margin-bottom: 3px;}
+.btn-text{font-size: .9em;}
+.pad-btn-follow{padding-top:1.5%;}
+.btn-msj-user{}
+/*******************************
+********** SEGUIDORES   ********
+********************************/
+
+.date-birthay{ font-size: .9em; float: right; margin-right: .3em;}
+.align-btn-follow-modal{top:1.5em;}
+
+
+
+/****** MENSAJES ******/
+.table-mensaje{ }
+.sms-title{ padding-left: 1em;}
+.title-table{ width: 100%;}
+.table-close{}
+.back-title{ background-color: #FF8000; color:white; padding-left: .5em; z-index: 1;}
+.mensaje-text{ color: #999494;}
+.user-mensaje{ color: #FF8000;}
+.img-mensaje{ width:90%;}
+.padd-mensaje{ padding:.3em; }
+ .modal-content{ height: 26em; overflow: hidden;}
+.date-msj{margin-top: 10px;}
+.hr-msj{ border-top: 1px solid #FF8000; padding: 0; margin: 0;}
+
+
+/********* CAMBIAR IMAGEN DE PERFIL **********/
+.col-upload-image{height: 8em; background-color:#dbe0e9; border: solid 1px chocolate;}
+.input-foto{opacity: 0; height: 6em; width: 100%; z-index: 1;}
+.position-icon-foto{position: relative;top: 40%;text-align: center;}
+.img-change-foto-current{height: 7em; margin: .5em;}
+.pad-title-modal{padding-left: .5em;}
+.m10{margin-left: 10px; margin-right: 10px;}
+.pl-10{padding-left: 20px;}
+.pr-10{padding-right: 20px;}
+/***********************************/
+/********** CANCIONES **************/
+/***********************************/
+.img-modal-user{max-height: 10em; }
+.img-modal-cancion{max-height: 6em; margin-bottom:.9em; }
+.audio-viewport{z-index: 1; position: absolute; left: 0;}
+.foto-song{margin-top: .3em;margin-left: .3em;margin-bottom: .3em; max-height: 50px;}
+.song-filters{margin-bottom: 0.1em;}
+.song-modal-content{ margin-top: .9em;}
+.trash{font-size: 1.3em; padding-top: .3em; }
+.video-karaoke{ margin: 5px; height: 245px; }
+
+
+.rec-filters{margin-bottom: 0.1em; margin-right: 5px;margin-left: 5px; background-color: white;
+}
+.record-text{font-size: 0.8em;}
+.icon-middle{vertical-align: middle;float: none;height: 5em;display: table-cell;}
+/*****  INPUT *************/
+.right-inner-addon { position: relative;}
+.right-inner-addon span { position: absolute; right: 0px; padding: 8px 10px; pointer-events: none;}
+
+
+
+/******  USUARIOS ***********/
+.bor-right{border-right: 3px solid gray;}
+.foto-user{min-height: 3.8em; padding: 3px;}
+.more{border-top: solid 2px #dd7723; background-color: white;padding-top: .3em;}
+
+.date-user{ font-size: .8em; padding-top: .6em; }
+
+.user:nth-of-type(odd){float: left; width: 50%;}
+.user::nth-of-type(even){float: right;  width: 50;}
+
+.med{ max-height: 3.8em; overflow: hidden; padding: 2px; }
+.spad-box-user{padding: 3px; background-color: white;}
+
+.user-modal-content{ margin-top: .9em; }
+/********** KARAOKE ***************/
+/**********************************/
+
+.karaoke-video{padding: .6em;}
+
+
+/******* DIEGO *******/
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.bordered{
+	border:solid 2px black;
+}
+
+.diego {
+	margin:0 0;
+	padding:0 0;
+}
+.xx-dialog .modal-dialog {
+    width :95%;
+    height: 100%;
+    position: absolute;
+}
+
+.diego2 {
+	margin:0 0;
+	padding:0 0;
+    height: 335px !important;
+    overflow-y: auto;
+}
+
+.h4button{
+	color: blue;
+}
+
+.h4button:hover{
+	cursor:pointer;
+}
+
+.conversTu{
+	background: cyan;
+	max-width:80%;
+	float:right;
+	text-align:right;
+	padding-left:1em;
+	padding-right:1em;
+}
+
+.conversEl{
+	background: grey;
+	max-width:80%;
+	float:left;
+	text-align:left;
+	padding-left:1em;
+	padding-right:1em;
+}
+
+
+/*ENMAQUETADO*/
+.menu{
+	height:15%;
+}
+html, body {height: 100%;}
+
+.fullScreen{
+	overflow:hidden;
+    height:100%;
+}
+
+.mainPanel{
+    height:100%;
+	overflow:hidden;
+}
+
+
+/* Ventana entera durante el modal, dar aqui opacidades*/
+.modal {
+	background-color: rgba(147,140, 211, 0.6); //opacity
+    height: 100%;
+    overflow-y: auto;
+}
+/* modal RAIZ */
+.modal-content{
+	height: 90%;
+    position: fixed;
+}
+/* modal MARCO */
+.modal-dialog{
+    margin-top:2%; /* aqui establecer un porcentaje adecuado para que se quede centrado, tener en cuenta que coge el porcentaje del width, no del hight*/
+	height:100%;
+	overflow:hidden;
+}
+.modal-header{
+    height: 10%;
+}
+.modal-body {
+    height: 90%;
+    overflow-y: auto;
+    padding: 0;
+}
+/*el body del modal de conversacion tiene que dejar espacio al footer*/
+.modal-Conversacion{
+	height: 80% !important;
+}
+.modal-footer{
+    height: 10%;
+}
+
+.back-foto-comunity{background: url('http://images.pushsquare.com/news/2014/05/opinion_how_ps4_streaming_will_make_singstar_hit_the_high_notes_again/attachment/1/original.jpg') no-repeat  center;
+
+}
+.scrollShow{
+	height:75%;
+    overflow-y: auto;
+}
+.scrollShow-follow{overflow-y: auto;}
+
+.muro-box{background-color: white;
+	padding:0;
+    margin-left: 0px; margin-right: 0px; margin-bottom: .3em;}
+.user-box{background-color: white;
+	padding:0;
+    margin-left: 0px; margin-right: 0px;}
+.caja{
+	background-color: white;
+	padding:0;
+    border-bottom: 2px solid  #dd7723;
+    margin-left: 0px; margin-right: 0px; margin-bottom: .3em;
+}
+.scroll-viewport{
+	background-color: white;
+	padding:0;
+    margin-left: 0px; margin-right: 0px; margin-bottom: 0px;
+}
+
+.modal-body2{
+	width:100%;
+	padding: 5px;
+	text-align:center;
+}
+.balls{text-align:center; padding-bottom:5px;}
+
+a{text-decoration: none;}
+
+/*parece que no rulan en el movil, pero es para no mostrar controles en fullscreen*/
+video::-webkit-media-controls {
+  display:none !important;
+}
+video::-webkit-media-controls-enclosure {
+  display:none !important;
+}

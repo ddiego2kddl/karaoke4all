@@ -1,0 +1,46 @@
+<div class="modal-header diego">
+  <table class="table-mensaje">
+    <tr class="back-title">
+      <td class="title-table"><div class="sms-title"><h4>{{user.username}}</h4></div></td>
+      <td><div class="table-close">
+            <span class="glyphicon glyphicon-remove m10" ng-click="close()"></span>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="modal-body">
+
+    <div class="scrollShow-follow">
+        <div class="row user-modal-content">
+             <div class="col-xs-4 center-block">
+                     <img src="{{path}}{{user.url_foto}}" class="img-responsive img-modal-user">
+             </div>
+              <div class="col-xs-8 center-block">
+                    <p>{{user.city}} - {{user.country}}</p>
+                    <p>Fecha de nacimiento: {{user.fech_nac}}</p>
+                    <p>Genero: {{user.gender}}</p>
+                    <p>Antiguedad: {{user.create_time}}</p>
+                    <div class="btn-orange pull-left btn-orange-msj" ng-click="mensaje()"><span class="glyphicon glyphicon-envelope"> </span></div>
+                    <div class="pull-left btn-orange-follow"  ng-click="editFollow(user)"><span class="glyphicon glyphicon-user"><span class="editFollow(user) btn-text">{{user.extraDesc}}</span></div>
+             </div>
+             
+
+        </div>
+        <div class="row">
+            
+             <div class="col-xs-3"></div>
+             <div class="col-xs-6 center-block">
+                    <hr class="hr-orange">
+                    <div class="center-block">
+                        <div class="btn-orange btn" ng-click="goToMuro()"> <span class="glyphicon glyphicon-eye-open"> Muro</span></div>
+                        <div class="btn-orange btn" ng-click="goToGrabaciones()"><span class="glyphicon glyphicon-facetime-video"> Grabaciones</span></div>
+                        <div class="btn-orange btn" ng-click="retar()"><span class="glyphicon glyphicon-user"> Retar</span></div>
+                    </div>
+             </div>
+             <div class="col-xs-3"></div>
+        </div>
+    </div>
+</div>
+

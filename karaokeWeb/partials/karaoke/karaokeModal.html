@@ -1,0 +1,72 @@
+
+
+    <div class="modal-header diego">
+       <div class="row back-title">
+           <div class="col-md-11"><div class="sms-title"><h4>Karaoke</h4></div></div>
+           <div class="col-md-1"><span class="glyphicon glyphicon-remove btn-close" ng-click="close()"></span></div>
+       </div>
+   </div>
+    <div class="modal-body-karaoke">
+	    <div class="row"  ng-show="playing">
+	        <div class="col-md-9">
+	             
+
+	            <div class="embed-responsive embed-responsive-16by9">
+                       <video id="video" class="embed-responsive-item karaoke-video" src="srcVideo" frameborder="0" allowfullscreen></video>
+                </div>
+            
+	        </div>
+	        <div class="col-md-3"> 
+                    
+                  <div class="col-md-12 margin-bott-6" ng-hide="started">
+                     <div class="col-md-12"><div id="controls" class="btn btn-lg btn-orange-k" ng-click="grabar()"><span class="glyphicon glyphicon-music" > </span> <p class="f-9">Grabar</p> </div></div>         
+                  </div>
+
+                  <div class="col-md-12 margin-bott-6" ng-show="started">
+                     <div class="col-md-12"><div class="btn btn-lg btn-orange-k" ng-click="fullScreen()"><span class="glyphicon glyphicon-resize-full" > </span><p class="f-9">FullScreen</p></div></div>         
+                  </div>
+
+                  <div class="col-md-12 margin-bott-6" ng-show="started">
+                     <div class="col-md-12"><div class="btn btn-lg btn-cancel-k" ng-click="stop();"><span class="glyphicon glyphicon-remove" ></span><p class="f-9">Cancelar</p></div></div>
+                  </div>
+                  
+                  <div class="col-md-12 margin-bott-6">
+                     <div class="col-md-12"><div class="btn btn-lg btn-cancel-k" ng-click="stop()"><span class="glyphicon glyphicon-remove" ></span><p class="f-9">Stop</p></div></div>
+                  </div>
+                  
+                     
+               </div>
+                
+                  
+	        </div>
+	              
+	    </div>
+
+	    <div class="row" ng-hide="playing" style="margin-left:1em;">
+	    	<h4>Grabacion Finalizada</h4>
+                    <div class="row">
+                        <div class="col-xs-12"> 
+                            <p>Escribe un encabezado para tu grabación:</p>
+                            <textarea rows="2" cols="40" ng-model="comentario"  class="com-song" placeholder="Escribe aqui tu comentario sobre esta grabacion"></textarea>       
+                        </div>
+                        <div class="col-xs-12">
+                            <p>Escuchar grabación:</p>
+                            <div id="resume"><audio id="audio" controls></audio> </div>
+                            <div class="btn btn-lg btn-controls-song" ng-click="playRecord()"><span class="glyphicon glyphicon-play" > </span><p>Play</p></div>
+                            <div class="btn btn-lg btn-controls-song" ng-click="stopRecord()"><span class="glyphicon glyphicon-stop" > </span>  <p>Stop</p></div>
+                            <div class="btn btn-lg btn-controls-song" ng-click="pauseRecord()"><span class="glyphicon glyphicon-pause" > </span> <p>Pause</p></div>
+                        </div>
+                    </div>
+                    <hr class="hr-orange">
+                    <div class="row">
+                        <div class="col-xs-2"></div>
+                        <div class="col-xs-4">
+                            <div class="btn btn-orange-k"  ng-click="compartir()"><span class="glyphicon glyphicon-thumbs-up" > </span>  <p>Compartir</p></div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="btn btn-cancel-k"  ng-click="close()"><span class="glyphicon glyphicon-remove" > </span>  <p> Salir</p></div>
+                        </div>
+                        <div class="col-xs-2"></div>
+                    </div>
+	    </div>
+</div>

@@ -1,0 +1,75 @@
+
+<div class="content-fluid hola">
+    <div class="row center-block comunity-div-title">
+        <h6 class="comunity-title">PERFIL</h6>
+    </div>
+
+    <div class="scrollShow">
+            <div class="row caja spad-smar">
+	              <div class="col-xs-5 spad-smar">
+	                  <p class="spad-smar options-perfil link-orange text-left">Email</a></p>
+	              </div>
+	              <div class="col-xs-7">
+	                  <p class="pull-right spad-smar options-perfil perfil-edit">{{myUser.email}}</input>
+	                  <span class="pull-right"></span>
+	              </div> 
+	              <hr class="col-xs-12 spad-smar">
+            </div>
+           <div class="row caja">
+	              <div class="col-xs-5 spad-smar">
+	                  <p class="spad-smar options-perfil link-orange">Nombre de usuario</a></p>
+	              </div>
+	              <div class="col-xs-6 spad-smar">
+	                  <input type="text" name="nombre" class="spad-smar pull-right text-right options-perfil perfil-edit" ng-model="myUser.username" ng-disabled="nombreCheck"></input>
+	                  
+	              </div>
+	              <div class="col-xs-1 spad-smar">
+	                  <span class="{{nombreSRC}} glyphicon icon-orange-perfil" ng-click="editar(0)"></span>
+	              </div>
+	              <hr class="col-xs-12 diego">
+            </div>
+            <div class="row caja">
+	              <div class="col-xs-5 spad-smar">
+	                  <p class="spad-smar options-perfil text-left link-orange">Fecha de nacimiento</a></p>
+	              </div>
+	              <div class="col-xs-6 spad-smar">
+	                  
+	                  <input type="date" name="date1" class="spad-smar pull-right date-input options-perfil perfil-edit" ng-model="myUser.fech_nac" ng-hide="dateCheck"></input>
+	                  <input type="text" name="date" class="spad-smar pull-right date-input options-perfil perfil-edit" ng-model="myUser.fech_nac|date:'mediumDate'" ng-show="dateCheck" ng-disabled="dateCheck"></input>
+	                  
+	              </div>
+	              <div class="col-xs-1 spad-smar">
+	                  <span class="{{dateSRC}} glyphicon icon-orange-perfil" ng-click="editar(1)"></span>
+	              </div>
+	              <hr class="col-xs-12 diego">
+            </div> 
+            <div class="row caja">
+	              <div class="col-xs-5 spad-smar">
+	                  <p class="spad-smar options-perfil text-left link-orange">Pais</a></p>
+	              </div>
+	              <div class="col-xs-6 spad-smar">
+	                  <input type="text" name="pais" class="spad-smar pull-right text-right options-perfil perfil-edit" ng-model="myUser.country" ng-disabled="paisCheck"></input>
+	                  
+	              </div>
+	              <div class="col-xs-1 spad-smar">
+	                  <span class="{{paisSRC}} glyphicon icon-orange-perfil" ng-click="editar(2)"></span>
+	              </div>
+	              <hr class="col-xs-12 diego">
+            </div> 
+            <div class="row caja">
+	              <div class="col-xs-5 spad-smar">
+	                  <p class="spad-smar options-perfil text-left link-orange">Ciudad</a></p>
+	              </div>
+	              <div class="col-xs-6 spad-smar">
+	                  <input type="text" name="ciudad" class="spad-smar pull-right text-right options-perfil perfil-edit" ng-model="myUser.city" ng-disabled="ciudadCheck"></input>
+	                  
+	              </div>
+	              <div class="col-xs-1 spad-smar">
+	                  <span class="{{ciudadSRC}} glyphicon icon-orange-perfil" ng-click="editar(3)"></span>
+	              </div>
+	              <hr class="col-xs-12 diego">
+            </div>
+
+ 
+    </div>
+</div>
